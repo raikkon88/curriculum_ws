@@ -24,7 +24,6 @@ public class UserService {
             throw new Exception("User already exists");
 
         return userRepository.save(user);
-
     }
 
 }

@@ -30,8 +30,11 @@ public class InitService {
         }
         catch (Exception e){
             System.out.println(e.getMessage());
-
-
         }
+
+        // TODO : Estic aquí... el què haig de pensar és qué faig amb el password...
+        // - L'envio?
+        // - El poso com a url a inicialitzar?
+        // El què està clar és que no l'hauria de desar en pla...
     }
 }
