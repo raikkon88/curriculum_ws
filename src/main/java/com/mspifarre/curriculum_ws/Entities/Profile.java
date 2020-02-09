@@ -1,8 +1,11 @@
 package com.mspifarre.curriculum_ws.Entities;
+import javax.persistence.Entity;
 
-public class Profile {
+@Entity
+public class Profile extends BaseEntity{
 
     private String name;
-    private Image profileImage;
+    // TODO : Definir el tipus de relació...
+    // private Image profileImage;
 
 }

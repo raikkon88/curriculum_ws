@@ -1,6 +1,9 @@
 package com.mspifarre.curriculum_ws.Entities;
 
-public class Job {
+import javax.persistence.Entity;
+
+@Entity
+public class Job extends BaseEntity{
 
     private String companyName;
     private String companyUrl;

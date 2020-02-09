@@ -1,6 +1,8 @@
 package com.mspifarre.curriculum_ws.Entities;
+import javax.persistence.Entity;
 
-public class Study {
+@Entity
+public class Study extends BaseEntity{
 
     private String name;
     private String category;
