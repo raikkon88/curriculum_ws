@@ -1,8 +1,7 @@
 package com.mspifarre.curriculum_ws.Entities;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+import javax.persistence.*;
 
 @Entity
 public class Profile  {
@@ -11,6 +10,11 @@ public class Profile  {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+
+    @OneToOne(mappedBy = "profile")
+    @JsonManagedReference
+    private User user;
+
     // TODO : Definir el tipus de relació...
     // private Image profileImage;
 
@@ -28,5 +32,13 @@ public class Profile  {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
